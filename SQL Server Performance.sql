@@ -4,8 +4,7 @@ GO
 CREATE VIEW PerfMon AS
 SELECT CONVERT(DATETIME, CAST(CounterDateTime AS VARCHAR(19))) AS CounterDateTime,
 MachineName, ObjectName, CounterName, InstanceName, CounterValue
-FROM dbo.CounterData AS D JOIN dbo.CounterDetails AS C ON D.CounterID = C.CounterID 
-ORDER BY CounterDateTime;
+FROM dbo.CounterData AS D JOIN dbo.CounterDetails AS C ON D.CounterID = C.CounterID ;
 GO
 
 SELECT *
